@@ -1,14 +1,16 @@
 const SideCursors = () => {
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden hidden lg:block">
-      {/* Cameron - Left Side */}
-      <div className="absolute -left-20 lg:-left-16 xl:-left-20 top-1/4">
+    // Conteneur principal avec visibilité responsive
+    <div className="absolute inset-0 pointer-events-none overflow-hidden hidden md:block">
+      {/* Cameron - Côté gauche */}
+      <div className="absolute -left-8 md:-left-12 lg:-left-16 xl:-left-20 top-1/3 md:top-1/4">
         <svg
           width="700"
           height="300"
           viewBox="0 0 700 300"
-          className="text-blue-600 w-[500px] h-[214px] lg:w-[600px] lg:h-[257px] xl:w-[700px] xl:h-[300px]"
+          className="text-blue-600 w-[300px] h-[129px] md:w-[400px] md:h-[171px] lg:w-[500px] lg:h-[214px] xl:w-[600px] xl:h-[257px] 2xl:w-[700px] 2xl:h-[300px]"
         >
+          {/* Courbe SVG pour Cameron */}
           <path
             d="M-50 150 Q100 20 350 120 Q500 220 650 150"
             stroke="currentColor"
@@ -17,6 +19,7 @@ const SideCursors = () => {
             strokeLinecap="round"
             markerEnd="url(#arrowhead-right)"
           />
+          {/* Définition de la flèche */}
           <defs>
             <marker
               id="arrowhead-right"
@@ -32,14 +35,15 @@ const SideCursors = () => {
         </svg>
       </div>
 
-      {/* Jane - Right Side */}
-      <div className="absolute -right-20 lg:-right-16 xl:-right-20 top-2/5">
+      {/* Jane - Côté droit */}
+      <div className="absolute -right-8 md:-right-12 lg:-right-16 xl:-right-20 top-1/2 md:top-2/5">
         <svg
           width="700"
           height="300"
           viewBox="0 0 700 300"
-          className="text-purple-600 w-[500px] h-[214px] lg:w-[600px] lg:h-[257px] xl:w-[700px] xl:h-[300px]"
+          className="text-purple-600 w-[300px] h-[129px] md:w-[400px] md:h-[171px] lg:w-[500px] lg:h-[214px] xl:w-[600px] xl:h-[257px] 2xl:w-[700px] 2xl:h-[300px]"
         >
+          {/* Courbe SVG pour Jane */}
           <path
             d="M750 150 Q600 20 350 120 Q200 220 50 150"
             stroke="currentColor"
@@ -48,6 +52,7 @@ const SideCursors = () => {
             strokeLinecap="round"
             markerEnd="url(#arrowhead-right-jane)"
           />
+          {/* Définition de la flèche */}
           <defs>
             <marker
               id="arrowhead-right-jane"
