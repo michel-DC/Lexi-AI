@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronRight, Sparkles, Zap } from "lucide-react";
+import { ChevronRight, CircleChevronRight, Sparkles, Zap } from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import SideCursors from "@/components/landing-page/cursor/cursor";
 
@@ -39,7 +39,7 @@ export default function HeroSection() {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 relative px-2 sm:px-0"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-4 sm:mb-6 relative px-2 sm:px-0 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -139,15 +139,7 @@ export default function HeroSection() {
             whileTap={{ scale: 0.95 }}
           >
             <span>Commencer Gratuitement</span>
-            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
-          </motion.button>
-
-          <motion.button
-            className="w-full sm:w-auto border-2 border-[#3337af] text-[#3337af] hover:bg-[#3337af] hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Voir la Démo
+            <CircleChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </motion.button>
         </motion.div>
 
