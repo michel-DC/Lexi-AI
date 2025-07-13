@@ -27,6 +27,10 @@
 
 ![Animated UI](./readme/3.png)
 
+### Section FAQ
+
+![FAQ Section](./readme/5.png)
+
 ### Section témoignages
 
 ![Testimonials](./readme/4.png)
