@@ -1,10 +1,17 @@
+import { motion } from "framer-motion";
+
 const SideCursors = () => {
   return (
     // Conteneur principal avec visibilité responsive
     <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block">
-      {/* Ligne courbe gauche */}
-      <div className="absolute -left-48 sm:-left-44 md:-left-40 lg:-left-36 xl:-left-32 2xl:-left-28 3xl:-left-24 top-32 sm:top-36 md:top-40 lg:top-44 xl:top-48 2xl:top-52 3xl:top-56">
-        <svg
+      {/* Ligne courbe gauche légèrement remontée */}
+      <motion.div
+        className="absolute -left-48 sm:-left-44 md:-left-40 lg:-left-36 xl:-left-32 2xl:-left-28 3xl:-left-24 top-32 sm:top-40 md:top-52 lg:top-60 xl:top-72 2xl:top-[18rem] 3xl:top-[22rem]"
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      >
+        <motion.svg
           width="800"
           height="400"
           viewBox="0 0 800 400"
@@ -13,8 +20,16 @@ const SideCursors = () => {
             width: "clamp(400px, 35vw, 1200px)",
             height: "clamp(200px, 17.5vw, 600px)",
           }}
+          animate={{
+            scale: [1, 1.02, 1],
+            rotate: [0, 0.5, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
-          {/* Définit un marqueur de flèche plus petit pour le curseur gauche */}
           <defs>
             <marker
               id="arrowhead-left"
@@ -26,7 +41,6 @@ const SideCursors = () => {
             >
               <polygon points="0 0, 6 2.5, 0 5" fill="#3b82f6" />
             </marker>
-            {/* Dégradé d'opacité pour la courbe gauche */}
             <linearGradient
               id="gradient-left"
               x1="0%"
@@ -39,20 +53,31 @@ const SideCursors = () => {
               <stop offset="100%" stopColor="#3b82f6" stopOpacity="1" />
             </linearGradient>
           </defs>
-          {/* Courbe partant du bord gauche vers le haut */}
-          <path
+          <motion.path
             d="M0 350 Q400 200 720 50"
             stroke="url(#gradient-left)"
             strokeWidth="3"
             fill="none"
             strokeLinecap="round"
             markerEnd="url(#arrowhead-left)"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{
+              pathLength: { duration: 2, ease: "easeInOut" },
+              opacity: { duration: 1, delay: 0.5 },
+            }}
           />
-        </svg>
-      </div>
+        </motion.svg>
+      </motion.div>
+
       {/* Ligne courbe droite */}
-      <div className="absolute -right-32 sm:-right-28 md:-right-24 lg:-right-20 xl:-right-16 2xl:-right-12 3xl:-right-8 top-1/2 sm:top-2/5 md:top-1/3 lg:top-1/2 xl:top-1/2 2xl:top-1/2 3xl:top-1/2">
-        <svg
+      <motion.div
+        className="absolute -right-32 sm:-right-28 md:-right-24 lg:-right-20 xl:-right-16 2xl:-right-12 3xl:-right-8 top-1/2 sm:top-2/5 md:top-1/3 lg:top-1/2 xl:top-1/2 2xl:top-1/2 3xl:top-1/2"
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+      >
+        <motion.svg
           width="800"
           height="450"
           viewBox="0 -50 800 450"
@@ -60,6 +85,16 @@ const SideCursors = () => {
           style={{
             width: "clamp(400px, 35vw, 1200px)",
             height: "clamp(200px, 17.5vw, 600px)",
+          }}
+          animate={{
+            scale: [1, 1.02, 1],
+            rotate: [0, -0.5, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
           }}
         >
           {/* Définit un marqueur de flèche plus petit pour le curseur droit */}
@@ -88,16 +123,22 @@ const SideCursors = () => {
             </linearGradient>
           </defs>
           {/* Courbe partant du bord droit vers le haut */}
-          <path
+          <motion.path
             d="M800 350 Q400 200 80 -50"
             stroke="url(#gradient-right)"
             strokeWidth="3"
             fill="none"
             strokeLinecap="round"
             markerEnd="url(#arrowhead-right)"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{
+              pathLength: { duration: 2, ease: "easeInOut", delay: 0.3 },
+              opacity: { duration: 1, delay: 0.8 },
+            }}
           />
-        </svg>
-      </div>
+        </motion.svg>
+      </motion.div>
     </div>
   );
 };

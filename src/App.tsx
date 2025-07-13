@@ -4,9 +4,11 @@ import LandingPage from "./pages/landing-page/landing-page";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-    </Routes>
+    <main>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </main>
   );
 }
 

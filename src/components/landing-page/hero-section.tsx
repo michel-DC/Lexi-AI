@@ -1,20 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronRight, CircleChevronRight, Sparkles, Zap } from "lucide-react";
+import { CircleChevronRight, Sparkles, Zap } from "lucide-react";
 import Navbar from "@/components/layout/navbar";
 import SideCursors from "@/components/landing-page/cursor/cursor";
+import Button from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50">
+    <div className="min-h-screen bg-white-500 mt-4 sm:mt-8 px-2 sm:px-0">
       {/* Navigation Header */}
       <Navbar />
 
       <SideCursors />
 
-      {/* Hero Section */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-12 lg:mt-20 pt-8 sm:pt-12 lg:pt-16 pb-8 text-center">
+      {/* Section principale responsive */}
+      <div className="relative max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 mt-6 sm:mt-10 lg:mt-16 pt-6 sm:pt-10 lg:pt-16 pb-6 sm:pb-10 text-center">
         {/* Floating Badge - IA Avancée */}
         <motion.div
           className="absolute top-4 left-4 sm:top-6 sm:left-6 lg:top-8 lg:left-8 bg-gradient-to-r from-[#3337af] to-[#333fea] text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium shadow-lg hidden sm:flex items-center space-x-1 sm:space-x-2"
@@ -130,17 +131,10 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          <motion.button
-            className="w-full sm:w-auto bg-gradient-to-r from-[#3337af] to-[#333fea] hover:from-[#2d2f9e] hover:to-[#2d36d9] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold flex items-center justify-center space-x-2 shadow-lg transition-all duration-200"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 20px 25px -5px rgba(51, 55, 175, 0.3)",
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <Button href="/">
             <span>Commencer Gratuitement</span>
             <CircleChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
-          </motion.button>
+          </Button>
         </motion.div>
 
         {/* Trust Indicators */}
@@ -172,9 +166,9 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Product Interface Preview */}
+      {/* Aperçu interface produit */}
       <motion.div
-        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-12 lg:mt-16"
+        className="relative max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 mt-6 sm:mt-10 lg:mt-16"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 1 }}
