@@ -1,68 +1,59 @@
-# React + TypeScript + Vite
+# Lexi AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Hero Preview](./readme/1.png)
 
-Currently, two official plugins are available:
+**Lexi AI** est une landing page moderne et animée, conçue autour d’un outil fictif d’écriture assistée par intelligence artificielle.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Ce projet n’a pas vocation à être un produit complet, mais représente une vitrine personnelle mettant en avant un design épuré, une animation soignée et un travail d’intégration abouti.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 Stack utilisée
 
-```js
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React + TypeScript**
+- **React Router**
+- **Framer Motion** – animations dynamiques
+- **Lucide Icons** – icônes élégantes et modulaires
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📸 Aperçu du site
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+### Interface fonctionnalités
 
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+![Features Section](./readme/2.png)
+
+### Section pricing
+
+![Animated UI](./readme/3.png)
+
+### Section témoignages
+
+![Testimonials](./readme/4.png)
+
+---
+
+## 🚀 Objectifs
+
+- Travailler la composition d’une **landing page complète** avec :  
+  Hero, Fonctionnalités, Démo, Cas d’usage, Avis, Pricing, FAQ, Footer.
+- Intégrer **Framer Motion** pour des animations fluides.
+- Reproduire le **style élégant et sobre** de sites comme Notion, Duolingo ou Figma.
+
+---
+
+## 📦 Installation locale
+
+Pour lancer le projet en local :
+
+```bash
+# 1. Cloner le dépôt
+git clone https://github.com/michel-DC/Lexi AI.git
+cd lexi-ai
+
+# 2. Installer les dépendances
+pnpm install
+
+# 3. Lancer le serveur de développement
+pnpm dev
 ```
