@@ -137,7 +137,7 @@ export default function HeroSection() {
           </Button>
         </motion.div>
 
-        {/* Trust Indicators */}
+        {/* Indicateurs de confiance */}
         <motion.div
           className="flex flex-col items-center justify-center space-y-3 sm:space-y-4 text-xs sm:text-sm text-gray-500 px-4 sm:px-0"
           initial={{ opacity: 0 }}
@@ -145,22 +145,52 @@ export default function HeroSection() {
           transition={{ delay: 0.8, duration: 0.8 }}
         >
           <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
-            <div className="flex -space-x-1">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">
-                A
-              </div>
-              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">
-                M
-              </div>
-              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-green-400 to-green-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">
-                S
-              </div>
-              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">
-                +
-              </div>
+            <div className="flex space-x-0">
+              <img
+                src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9tbWV8ZW58MHx8MHx8fDA%3D"
+                alt="Homme Unsplash"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=64&h=64&facepad=2"
+                alt="Utilisateur 2"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1615109398623-88346a601842?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9tbWV8ZW58MHx8MHx8fDA%3D"
+                alt="Utilisateur 3"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=64&h=64&facepad=2"
+                alt="Utilisateur 4"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=64&h=64&facepad=2"
+                alt="Utilisateur 2"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1615109398623-88346a601842?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9tbWV8ZW58MHx8MHx8fDA%3D"
+                alt="Utilisateur 3"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=64&h=64&facepad=2"
+                alt="Utilisateur 4"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              />
             </div>
             <span className="text-center sm:text-left">
-              Rejoint par plus de 50 000 créateurs de contenu
+              Rejoint par plus de <b>50&nbsp;000</b> créateurs de contenu
             </span>
           </div>
         </motion.div>
@@ -168,7 +198,7 @@ export default function HeroSection() {
 
       {/* Aperçu interface produit */}
       <motion.div
-        className="relative max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 mt-6 sm:mt-10 lg:mt-16"
+        className="relative max-w-8xl mx-auto px-2 sm:px-8 md:px-16 lg:px-24 mt-10 sm:mt-16 lg:mt-24"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 1 }}
