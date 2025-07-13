@@ -2,16 +2,12 @@
 
 import { motion } from "framer-motion";
 import { CircleChevronRight, Sparkles, Zap } from "lucide-react";
-import Navbar from "@/components/layout/navbar";
-import SideCursors from "@/components/landing-page/cursor/cursor";
+import SideCursors from "@/components/landing-page/animations/cursor";
 import Button from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
     <div className="min-h-screen bg-white-500 mt-4 sm:mt-8 px-2 sm:px-0">
-      {/* Navigation Header */}
-      <Navbar />
-
       <SideCursors />
 
       {/* Section principale responsive */}
@@ -206,7 +202,7 @@ export default function HeroSection() {
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-t from-violet-100 to-transparent rounded-t-2xl"></div>
           <div className="bg-white rounded-t-2xl shadow-2xl p-4 sm:p-6 lg:p-8 border border-gray-200">
-            <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-4 sm:p-6 min-h-[250px] sm:min-h-[300px] lg:min-h-[400px] flex items-center justify-center">
+            <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-4 sm:p-6 min-h-[420px] sm:min-h-[520px] lg:min-h-[650px] flex items-center justify-center">
               <div className="text-center space-y-3 sm:space-y-4">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#3337af] to-[#333fea] rounded-full flex items-center justify-center mx-auto">
                   <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-white" />

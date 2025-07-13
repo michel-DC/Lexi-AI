@@ -90,7 +90,6 @@ export default function HowItWorksSection() {
       id="comment-ca-marche"
       className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
     >
-      {/* Décor animé */}
       <motion.div
         className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-[#3337af]/20 to-[#333fea]/20 rounded-full blur-3xl"
         animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
