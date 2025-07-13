@@ -1,15 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Edit3,
-  Share2,
-  Eye,
-  ShieldCheck,
-  Pen,
-  Sparkles,
-  Network,
-} from "lucide-react";
+import { Edit3, Share2, Eye, ShieldCheck, Pen, Network } from "lucide-react";
 
 const features = [
   {
