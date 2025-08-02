@@ -2,11 +2,9 @@ import { motion } from "framer-motion";
 
 const SideCursors = () => {
   return (
-    // Conteneur principal avec visibilité responsive
-    <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block">
-      {/* Ligne courbe gauche légèrement remontée */}
+    <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block w-full">
       <motion.div
-        className="absolute -left-48 sm:-left-44 md:-left-40 lg:-left-36 xl:-left-32 2xl:-left-28 3xl:-left-24 top-32 sm:top-40 md:top-52 lg:top-60 xl:top-72 2xl:top-[18rem] 3xl:top-[22rem]"
+        className="absolute -left-32 sm:-left-28 md:-left-24 lg:-left-20 xl:-left-16 2xl:-left-12 3xl:-left-8 top-32 sm:top-40 md:top-52 lg:top-60 xl:top-72 2xl:top-[18rem] 3xl:top-[22rem]"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
@@ -70,9 +68,8 @@ const SideCursors = () => {
         </motion.svg>
       </motion.div>
 
-      {/* Ligne courbe droite */}
       <motion.div
-        className="absolute -right-32 sm:-right-28 md:-right-24 lg:-right-20 xl:-right-16 2xl:-right-12 3xl:-right-8 top-1/2 sm:top-2/5 md:top-1/3 lg:top-1/2 xl:top-1/2 2xl:top-1/2 3xl:top-1/2"
+        className="absolute -right-16 sm:-right-12 md:-right-8 lg:-right-4 xl:-right-2 2xl:right-0 3xl:right-2 top-1/2 sm:top-2/5 md:top-1/3 lg:top-1/2 xl:top-1/2 2xl:top-1/2 3xl:top-1/2"
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
@@ -97,7 +94,6 @@ const SideCursors = () => {
             delay: 1,
           }}
         >
-          {/* Définit un marqueur de flèche plus petit pour le curseur droit */}
           <defs>
             <marker
               id="arrowhead-right"
@@ -109,7 +105,6 @@ const SideCursors = () => {
             >
               <polygon points="0 0, 6 2.5, 0 5" fill="#8b5cf6" />
             </marker>
-            {/* Dégradé d'opacité pour la courbe droite */}
             <linearGradient
               id="gradient-right"
               x1="0%"
@@ -122,7 +117,6 @@ const SideCursors = () => {
               <stop offset="100%" stopColor="#8b5cf6" stopOpacity="1" />
             </linearGradient>
           </defs>
-          {/* Courbe partant du bord droit vers le haut */}
           <motion.path
             d="M800 350 Q400 200 80 -50"
             stroke="url(#gradient-right)"

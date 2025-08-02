@@ -4,7 +4,7 @@ import LandingPage from "./pages/landing-page/landing-page";
 
 function App() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Routes>
         <Route path="/" element={<LandingPage />} />
       </Routes>

@@ -9,7 +9,7 @@ import FAQSection from "@/components/landing-page/faq-section";
 
 export default function LandingPage() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Navbar />
       <HeroSection />
       <FeaturesSection />

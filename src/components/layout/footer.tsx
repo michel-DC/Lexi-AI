@@ -4,21 +4,21 @@ import { Facebook, Linkedin, Instagram, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#181a23] to-[#23243a] text-white rounded-t-3xl shadow-lg overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 pt-12 pb-4">
+    <footer className="bg-gradient-to-b from-[#181a23] to-[#23243a] text-white rounded-t-2xl sm:rounded-t-3xl shadow-lg overflow-hidden">
+      <div className="max-w-6xl xl:max-w-7xl mx-auto px-3 sm:px-4 md:px-6 pt-8 sm:pt-10 md:pt-12 pb-3 sm:pb-4">
         {/* Bloc principal centré */}
-        <div className="text-left sm:text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+        <div className="text-left sm:text-center mb-8 sm:mb-10 md:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Nous contacter
           </h1>
-          <p className="text-base sm:text-lg text-gray-300 mb-2">
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-2">
             Vous avez une question, un projet ou autre ?<br />
             Et vous souhaitez me contacter ?
           </p>
-          <div className="mt-6 flex sm:justify-center">
+          <div className="mt-4 sm:mt-6 flex sm:justify-center">
             <a
               href="mailto:contact@lexiai.fr"
-              className="bg-white text-[#23243a] font-semibold px-6 py-3 rounded-xl shadow hover:scale-105 hover:shadow-lg transition-all duration-200"
+              className="bg-white text-[#23243a] font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl shadow hover:scale-105 hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
             >
               Ça se passe juste ici
             </a>
@@ -26,12 +26,12 @@ export default function Footer() {
         </div>
 
         {/* Séparateur */}
-        <div className="border-t border-white/10 my-8" />
+        <div className="border-t border-white/10 my-6 sm:my-8" />
 
         {/* Bas de page : liens légaux, réseaux, copyright */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs sm:text-sm">
           {/* Liens légaux */}
-          <div className="flex gap-6 text-gray-400 order-2 sm:order-1">
+          <div className="flex gap-4 sm:gap-6 text-gray-400 order-2 sm:order-1">
             <a href="#" className="hover:text-white transition-colors">
               Mentions Légales
             </a>
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
 
           {/* Réseaux sociaux */}
-          <div className="flex gap-4 order-3 sm:order-3">
+          <div className="flex gap-3 sm:gap-4 order-3 sm:order-3">
             <a
               href="https://linkedin.com"
               target="_blank"
@@ -52,7 +52,7 @@ export default function Footer() {
               aria-label="LinkedIn"
               className="hover:text-[#8b5cf6] transition-colors"
             >
-              <Linkedin className="w-6 h-6" />
+              <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
             <a
               href="https://www.instagram.com/"
@@ -61,7 +61,7 @@ export default function Footer() {
               aria-label="Instagram"
               className="hover:text-[#8b5cf6] transition-colors"
             >
-              <Instagram className="w-6 h-6" />
+              <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
             <a
               href="https://www.facebook.com/"
@@ -70,7 +70,7 @@ export default function Footer() {
               aria-label="Facebook"
               className="hover:text-[#8b5cf6] transition-colors"
             >
-              <Facebook className="w-6 h-6" />
+              <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
             <a
               href="https://www.gmail.com/"
@@ -79,13 +79,13 @@ export default function Footer() {
               aria-label="Mail"
               className="hover:text-[#8b5cf6] transition-colors"
             >
-              <Mail className="w-6 h-6" />
+              <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 text-center text-gray-400 text-xs">
+        <div className="mt-6 sm:mt-8 text-center text-gray-400 text-xs">
           Design & Dev With <span className="text-red-400">♥</span> by Michel -
           2025
         </div>

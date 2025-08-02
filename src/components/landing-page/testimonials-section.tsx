@@ -98,45 +98,8 @@ const testimonials: Testimonial[] = [
     name: "Marvin McKinney",
     avatar: "https://randomuser.me/api/portraits/men/53.jpg",
     content:
-      "L'outil s'adapte à tous mes besoins, que ce soit pour des posts LinkedIn ou des newsletters.",
-    rating: 3,
-  },
-  {
-    name: "Esther Howard",
-    avatar: "https://randomuser.me/api/portraits/women/63.jpg",
-    content: "Le design est agréable et l'expérience utilisateur très fluide.",
+      "La qualité du contenu généré est impressionnante, même pour des sujets techniques.",
     rating: 4,
-  },
-  {
-    name: "Jerome Bell",
-    avatar: "https://randomuser.me/api/portraits/men/63.jpg",
-    content: "Je recommande LexiAI à tous mes collègues rédacteurs !",
-    rating: 5,
-  },
-  {
-    name: "Jenny Wilson",
-    avatar: "https://randomuser.me/api/portraits/women/73.jpg",
-    content: "La fonction d'optimisation SEO m'a permis de booster mon trafic.",
-    rating: 4,
-  },
-  {
-    name: "Ralph Edwards",
-    avatar: "https://randomuser.me/api/portraits/men/73.jpg",
-    content: "Le support client est toujours à l'écoute et efficace.",
-    rating: 2,
-  },
-  {
-    name: "Annette Black",
-    avatar: "https://randomuser.me/api/portraits/women/83.jpg",
-    content:
-      "Je peux enfin me concentrer sur la créativité, LexiAI s'occupe du reste !",
-    rating: 5,
-  },
-  {
-    name: "Kathryn Murphy",
-    avatar: "https://randomuser.me/api/portraits/women/93.jpg",
-    content: "Un must-have pour les agences de communication.",
-    rating: 3,
   },
   {
     name: "Floyd Miles",
@@ -148,26 +111,32 @@ const testimonials: Testimonial[] = [
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="bg-white rounded-2xl shadow border border-gray-100 p-8 flex flex-col gap-4 min-w-[340px] max-w-[380px] h-[210px] justify-between transition-all duration-300">
-      <div className="flex items-center gap-4 mb-1">
+    <div className="bg-white rounded-xl sm:rounded-2xl shadow border border-gray-100 p-4 sm:p-6 md:p-8 flex flex-col gap-3 sm:gap-4 min-w-[280px] sm:min-w-[320px] md:min-w-[340px] max-w-[320px] sm:max-w-[360px] md:max-w-[380px] h-[180px] sm:h-[200px] md:h-[210px] justify-between transition-all duration-300">
+      <div className="flex items-center gap-3 sm:gap-4 mb-1">
         <img
           src={testimonial.avatar}
           alt={testimonial.name}
-          className="w-12 h-12 rounded-full object-cover border-2 border-white shadow"
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-white shadow"
         />
-        <span className="font-semibold text-gray-900 text-base">
+        <span className="font-semibold text-gray-900 text-sm sm:text-base">
           {testimonial.name}
         </span>
       </div>
       <div className="flex items-center gap-1 mb-1">
         {[...Array(testimonial.rating)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+          <Star
+            key={i}
+            className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-yellow-400 fill-current"
+          />
         ))}
         {[...Array(5 - testimonial.rating)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 text-gray-200" />
+          <Star
+            key={i}
+            className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gray-200"
+          />
         ))}
       </div>
-      <p className="text-gray-600 text-sm leading-relaxed">
+      <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
         {testimonial.content}
       </p>
     </div>
@@ -210,24 +179,24 @@ export default function TestimonialsSection() {
   const half = Math.ceil(allTestimonials.length / 2);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl  mb-10 font-bold text-center bg-gradient-to-r from-[#1a1a2e] via-[#3337af] to-[#333fea] bg-clip-text text-transparent">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      <div className="max-w-6xl xl:max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-6 sm:mb-8 md:mb-10 font-bold text-center bg-gradient-to-r from-[#1a1a2e] via-[#3337af] to-[#333fea] bg-clip-text text-transparent">
           Ils nous font confiance
         </h1>
         <div
           ref={sliderRef}
-          className="overflow-x-auto scrollbar-hide flex flex-col gap-10"
+          className="overflow-x-auto scrollbar-hide flex flex-col gap-6 sm:gap-8 md:gap-10"
           style={{ scrollBehavior: "auto" }}
         >
           {/* Ligne 1 */}
-          <div className="flex gap-8 mb-2">
+          <div className="flex gap-4 sm:gap-6 md:gap-8 mb-2">
             {allTestimonials.slice(0, half).map((t, i) => (
               <TestimonialCard testimonial={t} key={"t1-" + i} />
             ))}
           </div>
           {/* Ligne 2, décalée */}
-          <div className="flex gap-8 opacity-80 ml-24 sm:ml-40 md:ml-56 lg:ml-72 xl:ml-80 2xl:ml-[400px]">
+          <div className="flex gap-4 sm:gap-6 md:gap-8 opacity-80 ml-12 sm:ml-16 md:ml-24 lg:ml-32 xl:ml-40 2xl:ml-48">
             {allTestimonials.slice(half).map((t, i) => (
               <TestimonialCard testimonial={t} key={"t2-" + i} />
             ))}
