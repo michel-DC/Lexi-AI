@@ -43,7 +43,10 @@ export default function FAQSection() {
   const toggle = (idx: number) => setOpen(open === idx ? null : idx);
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section
+      id="faq"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+    >
       <motion.div
         className="absolute top-1/2 right-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-gradient-to-br from-[#3337af] to-[#333fea] rounded-full opacity-10 blur-xl sm:blur-2xl z-0"
         initial={{ x: 100, opacity: 0 }}

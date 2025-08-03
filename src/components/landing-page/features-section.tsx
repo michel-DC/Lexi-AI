@@ -146,7 +146,7 @@ const stats = [
 export default function FeaturesSection() {
   return (
     <section
-      id="fonctionnalites"
+      id="features"
       className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
     >
       {/* Éléments flottants comme dans hero */}

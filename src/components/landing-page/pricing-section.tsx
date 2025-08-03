@@ -48,7 +48,7 @@ const plans = [
 export default function PricingSection() {
   return (
     <section
-      id="tarifs"
+      id="pricing"
       className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
     >
       {/* Décorations flottantes */}

@@ -25,34 +25,34 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-x-3 lg:gap-x-6 xl:gap-x-10">
           <a
-            href="#fonctionnalites"
+            href="#features"
             className="text-gray-700 hover:text-[#3337af] transition-colors font-medium text-xs lg:text-sm xl:text-base"
           >
             Fonctionnalités
           </a>
           <a
-            href="#comment-ca-marche"
+            href="#for-you"
             className="text-gray-700 hover:text-[#3337af] transition-colors font-medium text-xs lg:text-sm xl:text-base"
           >
-            Comment ça marche
+            Pour vous
           </a>
           <a
-            href="#temoignages"
-            className="text-gray-700 hover:text-[#3337af] transition-colors font-medium text-xs lg:text-sm xl:text-base"
-          >
-            Témoignages
-          </a>
-          <a
-            href="#tarifs"
+            href="#pricing"
             className="text-gray-700 hover:text-[#3337af] transition-colors font-medium text-xs lg:text-sm xl:text-base"
           >
             Tarifs
           </a>
           <a
-            href="#contact"
+            href="#faq"
             className="text-gray-700 hover:text-[#3337af] transition-colors font-medium text-xs lg:text-sm xl:text-base"
           >
-            Contact
+            FAQ
+          </a>
+          <a
+            href="#testimonials"
+            className="text-gray-700 hover:text-[#3337af] transition-colors font-medium text-xs lg:text-sm xl:text-base"
+          >
+            Témoignages
           </a>
         </div>
 

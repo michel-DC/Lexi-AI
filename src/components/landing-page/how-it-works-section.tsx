@@ -89,7 +89,7 @@ const features = [
 export default function HowItWorksSection() {
   return (
     <section
-      id="comment-ca-marche"
+      id="for-you"
       className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
     >
       <motion.div
