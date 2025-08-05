@@ -52,7 +52,7 @@ Pour lancer le projet en local :
 
 ```bash
 # 1. Cloner le dépôt
-git clone https://github.com/michel-DC/Lexi AI.git
+git clone https://github.com/michel-DC/Lexi-AI.git
 cd lexi-ai
 
 # 2. Installer les dépendances
