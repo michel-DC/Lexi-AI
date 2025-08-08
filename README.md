@@ -12,8 +12,8 @@
 
 - **React + TypeScript**
 - **React Router**
-- **Framer Motion** – animations dynamiques
-- **Lucide Icons** – icônes élégantes et modulaires
+- **Framer Motion** 
+- **Lucide Icons**
 
 ---
 
