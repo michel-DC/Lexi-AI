@@ -53,11 +53,13 @@ Pour lancer le projet en local :
 ```bash
 # 1. Cloner le dépôt
 git clone https://github.com/michel-DC/Lexi-AI.git
+
+#2 Ouvrir le projet
 cd lexi-ai
 
-# 2. Installer les dépendances
+# 3. Installer les dépendances
 pnpm install
 
-# 3. Lancer le serveur de développement
+# 4. Lancer le serveur de développement
 pnpm dev
 ```
